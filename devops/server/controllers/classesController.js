@@ -58,9 +58,8 @@ exports.updateClass = async (req, res) => {
 // Delete a class by id
 exports.deleteClass = async (req, res) => {
   try {
-    const classItem = await Class.findById(req.params.id);
-    if (classItem) {
-      await classItem.remove();
+    const result = await Class.findByIdAndDelete(req.params.id);
+    if (result) {
       res.json({ message: 'Class deleted' });
     } else {
       res.status(404).json({ message: 'Class not found' });

@@ -58,9 +58,8 @@ exports.updateCountry = async (req, res) => {
 // Delete a country by id
 exports.deleteCountry = async (req, res) => {
   try {
-    const country = await Country.findById(req.params.id);
-    if (country) {
-      await country.remove();
+    const result = await Country.findByIdAndDelete(req.params.id);
+    if (result) {
       res.json({ message: 'Country deleted' });
     } else {
       res.status(404).json({ message: 'Country not found' });
