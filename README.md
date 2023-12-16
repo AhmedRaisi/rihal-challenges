@@ -57,7 +57,7 @@ _Brief Description_:
 Feel free to reach out to me for any queries or discussions related to these challenges:
 
 - Email: ahmedalraisi@gmail.com
-- LinkedIn: [[Your LinkedIn Profile](http://www.linkedin.com/in/ahmedalraisi7/)]
+- LinkedIn: [[LinkedIn Profile](http://www.linkedin.com/in/ahmedalraisi7/)]
 - GitHub: github.com/AhmedRaisi
 
 ---
