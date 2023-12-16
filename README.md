@@ -1,16 +1,65 @@
-# Introduction
-Rihal is an Omani established company that specializes in Data Management and Process Automation. Established in 2018 Rihal quickly became synonymous with accomplishment and quality delivery. Projects are accomplished using in-house built IP combined with international recognized IP. Rihal focuses mostly on Engineering data management solutions, but also performed projects for Shared Services departments.
+# Rihal Challenges - Ahmed Al Raisi's Fork
 
-# Cool story bro, what do you want?
-We're after individuals who are passionate about solving highly technical problems and developing software solutions for high profile projects. Currently open opportunities shown below.
+## Introduction
 
-# Opportunities
-Data Engineers (Omani Fresh Graduates) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering
+This repository is my personal fork of Rihal's challenge repository. Rihal, an Omani company established in 2018, specializes in Data Management and Process Automation. Known for quality delivery and accomplishment, Rihal has become a name synonymous with excellence in Engineering data management solutions and projects for Shared Services departments.
 
-Data Scientists (Omani Fresh Graduates) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/data_science
+## My Journey with Rihal Challenges
 
-Full-Stack .Net Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/dotnet
+As an aspiring professional passionate about solving complex technical problems and developing high-quality software solutions, I am actively engaging with Rihal's challenges. This repository documents my progress, approaches, and solutions to the various challenges posted by Rihal, highlighting my skills and problem-solving capabilities.
 
-Full-Stack Web Developers (Fresh Graduates and Experienced) **Open** https://github.com/rihal-om/rihal-challenges/tree/main/devops
+## Challenge Progress
 
-RPA Developer (Fresh Graduates and Experienced) **Open** https://www.careers-page.com/rihal-2/job/88746R
+Here's a quick overview of the challenges I've tackled, along with brief descriptions of my approach and solutions:
+
+### Data Engineers 
+
+**Status**: Completed
+
+[View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering)
+
+_Brief Description_:
+
+### Data Scientists 
+
+**Status**: In Progress
+
+[View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/data_science)
+
+_Brief Description_:
+
+### Full-Stack .Net Developers 
+
+**Status**: In Progress
+
+[View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/dotnet)
+
+_Brief Description_:
+
+### Full-Stack Web Developers 
+
+**Status**: In Progress 
+
+[View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/devops)
+
+_Brief Description_:
+
+### RPA Developer 
+
+**Status**: Completed
+
+[View Challenge](https://www.careers-page.com/rihal-2/job/88746R)
+
+_Brief Description_: 
+
+## Contact
+
+Feel free to reach out to me for any queries or discussions related to these challenges:
+
+- Email: ahmedalraisi@gmail.com
+- LinkedIn: [[LinkedIn Profile](http://www.linkedin.com/in/ahmedalraisi7/)]
+- GitHub: github.com/AhmedRaisi
+
+---
+
+_This README is a part of my submission for Rihal's challenges and represents my personal work and approach towards solving complex problems in the field of software development and data science._
