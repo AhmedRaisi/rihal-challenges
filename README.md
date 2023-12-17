@@ -18,7 +18,7 @@ Here's a quick overview of the challenges I've tackled, along with brief descrip
 
 [View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/data_engineering)
 
-_Brief Description_:
+_Brief Description_: In the OCR Challenge for Data Engineering, I developed a Python-based software solution using Pytesseract for Optical Character Recognition (OCR) to extract and standardize key information from images, including dates, room names, rates, individual names, and email addresses. The project involved applying regular expressions for accurate data extraction and pattern matching, coupled with data cleaning techniques to ensure the standardization of formats, particularly for dates and names. Key skills demonstrated included adept Python programming for data manipulation, problem-solving through debugging OCR accuracy issues, and maintaining clear, well-documented code for readability and collaboration. This solution effectively automated data extraction, highlighting the practical use of OCR technology and data engineering in processing and standardizing complex data from images.
 
 ### Data Scientists 
 
