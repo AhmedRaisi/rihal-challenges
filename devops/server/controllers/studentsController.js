@@ -4,7 +4,6 @@ const Student = require('../models/Student');
 // Get all students
 exports.getAllStudents = async (req, res) => {
   try {
-    // If you want to populate the class and country details, use .populate('class_id country_id')
     const students = await Student.find().populate('class_id country_id');
     res.json(students);
   } catch (error) {
@@ -15,7 +14,6 @@ exports.getAllStudents = async (req, res) => {
 // Get a single student by id
 exports.getStudentById = async (req, res) => {
   try {
-    // Populate to get the class and country documents instead of just the ObjectId
     const student = await Student.findById(req.params.id).populate('class_id country_id');
     if (student) {
       res.json(student);
@@ -48,17 +46,16 @@ exports.createStudent = async (req, res) => {
 exports.updateStudent = async (req, res) => {
   try {
     const student = await Student.findById(req.params.id);
-    if (student) {
-      student.name = req.body.name;
-      student.date_of_birth = req.body.date_of_birth;
-      student.class_id = req.body.class_id;
-      student.country_id = req.body.country_id;
-
-      const updatedStudent = await student.save();
-      res.json(updatedStudent);
-    } else {
-      res.status(404).json({ message: 'Student not found' });
+    if (!student) {
+      return res.status(404).json({ message: 'Student not found' });
     }
+    student.name = req.body.name;
+    student.date_of_birth = req.body.date_of_birth;
+    student.class_id = req.body.class_id;
+    student.country_id = req.body.country_id;
+
+    const updatedStudent = await student.save();
+    res.json(updatedStudent);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }

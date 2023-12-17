@@ -104,27 +104,31 @@ export default {
   }
 };
 </script>
-  <style scoped>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  table, th, td {
-    border: 1px solid #ddd;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f5f5f5;
-  }
-  
-  button {
-    margin-right: 10px;
-  }
-  </style>
+<style scoped>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--background-color); /* Use CSS variable */
+  color: var(--text-color); /* Use CSS variable */
+}
+
+table, th, td {
+  border: 1px solid var(--border-color); /* Use CSS variable */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--table-header-background); /* Use CSS variable */
+}
+
+button {
+  margin-right: 10px;
+  background-color: var(--button-background); /* Use CSS variable */
+  color: var(--button-text-color); /* Use CSS variable */
+}
+</style>
   

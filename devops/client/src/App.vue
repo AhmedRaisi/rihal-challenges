@@ -1,13 +1,29 @@
 <template>
-  <nav>
-    <router-link to="/" class="nav-link">Home</router-link>
-    <router-link to="/about" class="nav-link">About</router-link>
-    <router-link to="/student" class="nav-link">Student</router-link>
-    <router-link to="/country" class="nav-link">Country</router-link>
-    <router-link to="/class" class="nav-link">Class</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <nav>
+      <router-link to="/" class="nav-link">Home</router-link>
+      <router-link to="/about" class="nav-link">About</router-link>
+      <router-link to="/student" class="nav-link">Student</router-link>
+      <router-link to="/country" class="nav-link">Country</router-link>
+      <router-link to="/class" class="nav-link">Class</router-link>
+      <button @click="toggleTheme">Toggle Theme</button>  
+    </nav>
+    <router-view/>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  methods: {
+    toggleTheme() {
+      const currentTheme = document.body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.body.setAttribute('data-theme', newTheme);
+    }
+  }
+};
+</script>
 
 <style>
 #app {
@@ -15,11 +31,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-color);
+  background-color: var(--background-color); /* Ensure background color changes */
 }
 
 nav {
-  background-color: #f5f5f5;
+  background-color: var(--button-background);
   padding: 20px 0;
   text-align: center;
 }
@@ -27,9 +44,15 @@ nav {
 .nav-link {
   margin: 0 15px;
   font-weight: bold;
-  color: #2c3e50;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s ease;
+}
+
+button {
+  margin-right: 10px;
+  background-color: var(--button-background); /* Use CSS variable */
+  color: var(--button-text-color); /* Use CSS variable */
 }
 
 .nav-link:hover,

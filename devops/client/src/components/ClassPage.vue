@@ -97,10 +97,12 @@ export default {
 table {
   width: 100%;
   border-collapse: collapse;
+  background-color: var(--background-color); /* Use CSS variable */
+  color: var(--text-color); /* Use CSS variable */
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color); /* Use CSS variable */
 }
 
 th, td {
@@ -109,10 +111,12 @@ th, td {
 }
 
 th {
-  background-color: #f5f5f5;
+  background-color: var(--table-header-background); /* Use CSS variable */
 }
 
 button {
   margin-right: 10px;
+  background-color: var(--button-background); /* Use CSS variable */
+  color: var(--button-text-color); /* Use CSS variable */
 }
 </style>
