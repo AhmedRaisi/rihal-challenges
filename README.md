@@ -42,15 +42,15 @@ _Brief Description_:
 
 [View Challenge](https://github.com/rihal-om/rihal-challenges/tree/main/devops)
 
-_Brief Description_:
+_Brief Description_: For the Rihal DevOps Challenge, I engineered a full-stack web application utilizing Vue.js, Express.js, and MongoDB, which was containerized using Docker for data management. The application features a responsive front-end interface, RESTful backend services, and CRUD operations on a local database that initializes upon startup. Key functionalities include displaying statistics like student counts per class and country, and computing the average age of students. This project exemplified core skills in full-stack development, including front-end and server-side programming, database integration, and application of best coding practices. The addition of a theme toggle further demonstrates a commitment to user accessibility and modern web design. The codebase, managed on GitHub, showcases well-documented and maintainable code for collaborative development and review. This solution effectively addresses the challenge requirements, showcasing the versatility and integration of modern web technologies for educational data management.
 
 ### RPA Developer 
 
 **Status**: Completed
 
-[View Challenge](https://www.careers-page.com/rihal-2/job/88746R)
+[View Repository](https://github.com/AhmedRaisi/Customer-Support-Automation-Bot)
 
-_Brief Description_: 
+_Brief Description_: For the Customer Support Automation Bot project, I developed an intelligent RPA solution using Python and NLTK, showcased on GitHub. This project features an automated bot that processes customer queries using NLP and generates responses for various intents, enhancing customer service efficiency. It includes advanced text processing, intent recognition, and dynamic response generation. The bot’s design ensures adaptability across different customer service scenarios and includes robust error handling. This project highlights my expertise in RPA, NLP, and Python programming, demonstrating best practices in software development and a commitment to improving customer interaction. The codebase, meticulously documented for clarity and maintainability, reflects a focus on collaborative development and innovative solutions in customer support automation.
 
 ## Contact
 
