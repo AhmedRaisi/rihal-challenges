@@ -3,6 +3,11 @@ const express = require('express');
 const router = express.Router();
 const studentController = require('../controllers/studentsController');
 
+
+// Get students average age
+router.get('/average-age', studentController.getAverageAgeOfStudents);
+
+
 // Get all students
 router.get('/', studentController.getAllStudents);
 
@@ -17,5 +22,7 @@ router.put('/:id', studentController.updateStudent);
 
 // Delete a student by id
 router.delete('/:id', studentController.deleteStudent);
+
+
 
 module.exports = router;

@@ -3,6 +3,10 @@ const express = require('express');
 const router = express.Router();
 const classController = require('../controllers/classesController');
 
+
+// Get students per class
+router.get('/student-class-count', classController.getStudentCountPerClass);
+
 // Get all classes
 router.get('/', classController.getAllClasses);
 
@@ -17,5 +21,6 @@ router.put('/:id', classController.updateClass);
 
 // Delete a class by id
 router.delete('/:id', classController.deleteClass);
+
 
 module.exports = router;

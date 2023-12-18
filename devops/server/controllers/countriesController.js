@@ -1,5 +1,21 @@
 // controllers/countriesController.js
 const Country = require('../models/Country');
+const Student = require('../models/Student');
+
+// Endpoint to get student count per country
+exports.getStudentCountPerCountry = async (req, res) => {
+  try {
+    const studentCount = await Student.aggregate([
+      { $group: { _id: "$country_id", count: { $sum: 1 } } },
+      { $lookup: { from: "countries", localField: "_id", foreignField: "_id", as: "country" } },
+      { $unwind: "$country" },
+      { $project: { _id: 0, country: "$country.name", count: 1 } }
+    ]);
+    res.json(studentCount);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 // Get all countries
 exports.getAllCountries = async (req, res) => {
@@ -68,3 +84,19 @@ exports.deleteCountry = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// Endpoint to get student count per country
+exports.getStudentCountPerCountry = async (req, res) => {
+  try {
+    const studentCount = await Student.aggregate([
+      { $group: { _id: "$country_id", count: { $sum: 1 } } },
+      { $lookup: { from: "countries", localField: "_id", foreignField: "_id", as: "country" } },
+      { $unwind: "$country" },
+      { $project: { _id: 0, country: "$country.name", count: 1 } }
+    ]);
+    res.json(studentCount);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+

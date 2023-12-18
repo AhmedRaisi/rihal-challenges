@@ -1,5 +1,7 @@
 /* Light Theme */
 :root {
+  --border-color: #ddd; /* Example color for light theme */
+  --graph-background: #fff; /* Example graph background color for light theme */
   --background-color: #ffffff;
   --text-color: #000000;
   --button-background: #f5f5f5;
@@ -9,9 +11,24 @@
   
 /* Dark Theme */
 [data-theme="dark"] {
+  --border-color: #444; /* Example color for dark theme */
+  --graph-background: #333; /* Example graph background color for dark theme */
   --background-color: #333333;
   --text-color: #ffffff;
   --button-background: #555555;
   --button-text-color: #ffffff;
   --table-header-background: #444444;
 }
+
+/* You can toggle the theme by setting the data-theme attribute on a parent element, typically <body> */
+body[data-theme="dark"] {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+body[data-theme="dark"] .graph-container {
+  border-color: var(--border-color);
+  background-color: var(--graph-background);
+}
+
+/* Additional dark theme overrides as necessary... */

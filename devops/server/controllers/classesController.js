@@ -1,5 +1,7 @@
 // controllers/classesController.js
 const Class = require('../models/Class');
+const Student = require('../models/Student');
+
 
 // Get all classes
 exports.getAllClasses = async (req, res) => {
@@ -64,6 +66,21 @@ exports.deleteClass = async (req, res) => {
     } else {
       res.status(404).json({ message: 'Class not found' });
     }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Endpoint to get student count per class
+exports.getStudentCountPerClass = async (req, res) => {
+  try {
+    const studentCount = await Student.aggregate([
+      { $group: { _id: "$class_id", count: { $sum: 1 } } },
+      { $lookup: { from: "classes", localField: "_id", foreignField: "_id", as: "class" } },
+      { $unwind: "$class" },
+      { $project: { _id: 0, class: "$class.class_name", count: 1 } }
+    ]);
+    res.json(studentCount);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

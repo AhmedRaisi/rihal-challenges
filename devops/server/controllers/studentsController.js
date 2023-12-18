@@ -74,3 +74,18 @@ exports.deleteStudent = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+// Endpoint to get the average age of students
+exports.getAverageAgeOfStudents = async (req, res) => {
+  try {
+    const currentYear = new Date().getFullYear();
+    const students = await Student.find();
+    const totalAge = students.reduce((acc, student) => acc + (currentYear - student.date_of_birth.getFullYear()), 0);
+    const averageAge = totalAge / students.length;
+    res.json({ averageAge: averageAge });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
