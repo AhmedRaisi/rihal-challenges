@@ -1,4 +1,3 @@
-// models/Class.js
 const mongoose = require('mongoose');
 
 const classSchema = new mongoose.Schema({
@@ -6,7 +5,7 @@ const classSchema = new mongoose.Schema({
     type: String,
     required: true
   }
-});
+}, { timestamps: true }); // Enable timestamps
 
 const Class = mongoose.model('Class', classSchema);
 

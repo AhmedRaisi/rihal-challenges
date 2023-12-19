@@ -1,4 +1,3 @@
-// models/Student.js
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -21,7 +20,7 @@ const studentSchema = new Schema({
     ref: 'Country',
     required: true
   }
-});
+}, { timestamps: true });
 
 const Student = mongoose.model('Student', studentSchema);
 

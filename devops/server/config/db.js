@@ -1,17 +1,13 @@
-// config/db.js
 const mongoose = require('mongoose');
 
-const dbURI = process.env.MONGODB_URI;
-
-const options = {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI); // Removed deprecated options
+    console.log('MongoDB connected...');
+  } catch (err) {
+    console.error('MongoDB connection error:', err);
+    process.exit(1);
+  }
 };
 
-mongoose.connect(dbURI, options)
-  .then(() => console.log('MongoDB connected...'))
-  .catch(err => console.error('MongoDB connection error:', err));
-
-module.exports = mongoose;
+module.exports = connectDB;

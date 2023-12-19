@@ -1,4 +1,3 @@
-// models/Country.js
 const mongoose = require('mongoose');
 
 const countrySchema = new mongoose.Schema({
@@ -6,7 +5,7 @@ const countrySchema = new mongoose.Schema({
     type: String,
     required: true
   }
-});
+}, { timestamps: true }); // Enable timestamps
 
 const Country = mongoose.model('Country', countrySchema);
 

@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
+const connectDB = require('./config/db'); // Import the connection function
 
 // Import routes
 const classRoutes = require('./routes/classes');
@@ -17,9 +18,7 @@ app.use(cors());
 app.use(express.json()); // Body parser middleware
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI)
-.then(() => console.log('MongoDB connected'))
-.catch((err) => console.error('MongoDB connection error:', err));
+connectDB(); // Call the function to connect to the database
 
 
 // Use routes
