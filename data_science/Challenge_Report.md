@@ -37,7 +37,6 @@ number_of_photos          0
 number_of_maintenance     0
 duration_listed           0
 price_usd                 0
-dtype: int64
 ```
 
 We observed that the `engine_capacity` column has 15 missing values. Addressing these missing values is crucial for the accuracy of the predictive model.
@@ -57,6 +56,28 @@ The model's performance was evaluated using the Mean Absolute Error (MAE) metric
 - The validation MAE indicates that, on average, the model's predictions on the validation set are off by approximately $759.53.
 - The test MAE is significantly higher, suggesting that the model may not generalize well to unseen data, indicating potential overfitting or differences in the data distribution between training and test datasets.
 
+## Extended Findings and Exploration
+
+### Data Preprocessing
+- Implemented KNN imputation for missing values in the `engine_capacity` column to preserve data integrity.
+- Conducted one-hot encoding for categorical variables, transforming them into a format suitable for machine learning models.
+- Created a new feature, `car_age`, derived from the `year_produced` column, to capture the potential impact of a car's age on its price.
+
+### Advanced Model Evaluation
+- Introduced standard scaling to normalize feature values, enhancing model performance, especially for algorithms sensitive to variable scales.
+- Employed cross-validation for the RandomForest model, obtaining a more robust estimate of the model's performance.
+
+### Additional Model Testing
+- Explored Gradient Boosting as an alternative model, tuning its parameters using GridSearchCV to find the optimal settings.
+- Tested a simpler Linear Regression model as a baseline to understand the problem's complexity.
+
+### Feature Importance Analysis
+- Analyzed and visualized the feature importances in the RandomForest model, gaining insights into which features most significantly impact car price predictions.
+
+### Overfitting Investigation
+- Noted a significant difference in performance between the training/validation sets and the test set for the RandomForest model, indicating overfitting.
+- Compared the RandomForest model's performance against the simpler Linear Regression and the tuned Gradient Boosting model to understand model complexities and overfitting tendencies.
+
 ## Conclusion and Next Steps
 The initial model has shown a discrepancy in performance between the validation and test sets, which warrants further investigation and model refinement. Potential next steps include:
 
@@ -65,3 +86,4 @@ The initial model has shown a discrepancy in performance between the validation 
 - **Hyperparameter Tuning**: Experimenting with different hyperparameters of the RandomForestRegressor to optimize the model.
 - **Model Comparison**: Testing other regression models to find a better fit for this data.
 
+This challenge has been an invaluable experience in applying comprehensive data science techniques, from advanced preprocessing and feature engineering to complex model evaluation and tuning.
